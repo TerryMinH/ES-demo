@@ -1,0 +1,50 @@
+<!--
+ * @Author: TerryMin
+ * @Date: 2021-12-27 15:25:18
+ * @LastEditors: TerryMin
+ * @LastEditTime: 2022-02-15 06:55:08
+ * @Description: file not
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  function git(limit, callback) {
+    var i = 0, promise = new Promise();
+    var git = setInterval(function () {
+      console.log(i);
+      if (i === limit - 1) {
+        clearInterval(git);
+        promise.resolve('done');
+      }
+      i++;
+    }, 800);
+
+    return promise;
+  }
+
+  git(5)
+    .then(function (x) {
+      console.log(x);
+
+      var promise = new Promise();
+      setTimeout(function () { promise.resolve("hello"); }, 1000);
+
+      return promise;
+    })
+    .then(function (y) {
+      console.log(y); // "hello" after 1000 milliseconds
+    });
+</script>
+
+</html>
