@@ -1,50 +1,43 @@
 <!--
  * @Author: TerryMin
- * @Date: 2021-12-27 15:25:18
+ * @Date: 2022-02-19 09:42:11
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-02-19 09:40:56
+ * @LastEditTime: 2022-06-02 09:59:02
  * @Description: file not
 -->
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: absolute;
+    }
+  </style>
 </head>
 
 <body>
-
+  <div></div>
 </body>
 <script>
-  function git(limit, callback) {
-    var i = 0, promise = new Promise();
-    var git = setInterval(function () {
-      console.log(i);
-      if (i === limit - 1) {
-        clearInterval(git);
-        promise.resolve('done');
-      }
-      i++;
-    }, 800);
+  let start = null;
+  let element = document.querySelector('div');
 
-    return promise;
+  const step = (timestamp) => {
+    console.log(timestamp);
+    
+    if (!start) start = timestamp;
+    let progress = timestamp - start;
+    element.style.left = Math.min(progress / 10, 200) + 'px';
+    if (progress < 2000) {
+      window.requestAnimationFrame(step);
+    }
   }
-console.log('test mac')
-  git(5)
-    .then(function (x) {
-      console.log(x);
 
-      var promise = new Promise();
-      setTimeout(function () { promise.resolve("hello"); }, 1000);
-
-      return promise;
-    })
-    .then(function (y) {
-      console.log(y); // "hello" after 1000 milliseconds
-    });
+  window.requestAnimationFrame(step);
 </script>
 
 </html>
