@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-02-19 09:42:11
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-06-02 09:59:02
+ * @LastEditTime: 2022-06-11 15:08:28
  * @Description: file not
 -->
 
@@ -10,34 +10,75 @@
 
 <head>
   <style>
-    div {
+    body {
+      width: 100vw;
+      background-color: black;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
       width: 100px;
       height: 100px;
-      background-color: red;
-      position: absolute;
+      border: 4px solid aquamarine;
+      background-color: #222;
+      overflow: hidden;
+      border-radius: 50%;
+      font-size: 36px;
+      filter: blur(6px) contrast(6);
+      /* 主要靠这行代码 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      width: 1em;
+      height: 1em;
+      transform: translate(0px, 0px);
+      background-color: aquamarine;
+      animation: move 2s linear infinite;
+    }
+
+    @keyframes move {
+      from {
+        transform: translateX(-100px);
+      }
+
+      to {
+        transform: translateX(100px);
+      }
     }
   </style>
+
+
+
 </head>
 
 <body>
-  <div></div>
+  <div class="container">
+    <div class="box"></div>
+  </div>
 </body>
+<script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
 <script>
-  let start = null;
-  let element = document.querySelector('div');
 
-  const step = (timestamp) => {
-    console.log(timestamp);
-    
-    if (!start) start = timestamp;
-    let progress = timestamp - start;
-    element.style.left = Math.min(progress / 10, 200) + 'px';
-    if (progress < 2000) {
-      window.requestAnimationFrame(step);
-    }
-  }
-
-  window.requestAnimationFrame(step);
+  const vm = new Vue({
+    data: {
+      name: '我是若川',
+    },
+    methods: {
+      sayName() {
+        console.log(this.name);
+      }
+    },
+  });
+  console.log(vm);
+  console.log(vm.name);
+  vm.sayName()
 </script>
+
 
 </html>
