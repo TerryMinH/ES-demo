@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-02-19 09:42:11
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-06-14 18:03:15
+ * @LastEditTime: 2022-06-15 11:42:26
  * @Description: file not
 -->
 
@@ -20,18 +20,28 @@
   </div>
 </body>
 <script>
-  function Stack () {
-    //属性
-    this.list = []
-  }
-  Stack.prototype.push = function (e) {
-    this.list.push(e)
-  }
-  let stack = new Stack()
-  stack.push(3)
-  stack.push(9)
-  stack.push(5)
-  console.log(stack);
+  // function Stack () {
+  //   //属性
+  //   this.list = []
+  // }
+  // Stack.prototype.push = function (e) {
+  //   this.list.push(e)
+  // }
+  // let stack = new Stack()
+  // stack.push(3)
+  // stack.push(9)
+  // stack.push(5)
+  // console.log(stack);
+
+
+  var str = "aa12bb0cc789"
+  console.info("原字符串：" + str + "<br/>")
+  var newStr = str.replace(/\d/g, function (matchStr, index, sourceStr) {
+    console.log(matchStr, index, sourceStr);
+    var result = parseInt(matchStr) + 1
+    return result
+  })
+  console.log(newStr);
 </script>
 
 
