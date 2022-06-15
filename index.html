@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-02-19 09:42:11
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-06-14 14:47:30
+ * @LastEditTime: 2022-06-14 18:03:15
  * @Description: file not
 -->
 
@@ -20,21 +20,18 @@
   </div>
 </body>
 <script>
-  const cacheStringFunction = (fn) => {
-    const cache = Object.create(null);
-    return ((str) => {
-      const hit = cache[str];
-      return hit || (cache[str] = fn(str));
-    });
-  };
-
-  const dealFn = (str) => {
-    console.log(str);
+  function Stack () {
+    //属性
+    this.list = []
   }
-
-  const func = cacheStringFunction(dealFn);
-  console.log(func);
-  func(55)
+  Stack.prototype.push = function (e) {
+    this.list.push(e)
+  }
+  let stack = new Stack()
+  stack.push(3)
+  stack.push(9)
+  stack.push(5)
+  console.log(stack);
 </script>
 
 
