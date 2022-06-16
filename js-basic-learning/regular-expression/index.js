@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-06-15 11:23:58
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-06-15 14:20:47
+ * @LastEditTime: 2022-06-15 16:58:19
  * @Description: file not
  */
 function is_weixn() {
@@ -41,6 +41,16 @@ const string3='123456789'.replace(/\B(?=(\d{3})+\b)/g,',');
 // console.log(string3);
 
 const string4=(/(?=.*[0-9])^[0-9A-Za-z]{2,12}$/).test('eee');
-console.log(string4);
+// console.log(string4);
+
+const regex = /^((\d)(\d(\d)))\1\2\3\4$/;
+const string5 = "1231231233";
+console.log( regex.test(string5) ); // true
+console.log( RegExp.$1 ); // 123
+console.log( RegExp.$2 ); // 1
+console.log( RegExp.$3 ); // 23
+console.log( RegExp.$4 ); // 3
+
+
 
 
