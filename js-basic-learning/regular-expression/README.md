@@ -2,12 +2,12 @@
  * @Author: TerryMin
  * @Date: 2022-06-15 11:21:48
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-06-16 07:04:39
+ * @LastEditTime: 2022-09-21 14:15:45
  * @Description: file not
 -->
 # JS 正则表达式
 
-(JS 正则表达式总结)[https://www.cnblogs.com/terrymin/p/15476211.html]
+(JS 正则表达式总结 个人博客园)[https://www.cnblogs.com/terrymin/p/15476211.html]
 
 ## 解析 (JS 正则表达完整教程-老姚)[https://juejin.cn/post/6844903487155732494#heading-8]
 正则是匹配模式，要么匹配字符，要么匹配位置。
@@ -19,3 +19,6 @@
 
 ### 多选分支
 分支结构也是惰性的，即当前面的匹配上了，后面的就不再尝试了。
+
+
+1. [JS 正则replace](https://cloud.tencent.com/developer/article/1028646)
