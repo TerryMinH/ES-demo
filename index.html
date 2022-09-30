@@ -2,47 +2,42 @@
  * @Author: TerryMin
  * @Date: 2022-02-19 09:42:11
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-06-15 11:42:26
+ * @LastEditTime: 2022-09-30 10:58:35
  * @Description: file not
 -->
 
 <html>
+  <head>
+    <style></style>
+  </head>
 
-<head>
-  <style>
-  </style>
-
-</head>
-
-<body>
-  <div class="container">
-    <div class="box"></div>
-  </div>
-</body>
-<script>
-  // function Stack () {
-  //   //属性
-  //   this.list = []
-  // }
-  // Stack.prototype.push = function (e) {
-  //   this.list.push(e)
-  // }
-  // let stack = new Stack()
-  // stack.push(3)
-  // stack.push(9)
-  // stack.push(5)
-  // console.log(stack);
-
-
-  var str = "aa12bb0cc789"
-  console.info("原字符串：" + str + "<br/>")
-  var newStr = str.replace(/\d/g, function (matchStr, index, sourceStr) {
-    console.log(matchStr, index, sourceStr);
-    var result = parseInt(matchStr) + 1
-    return result
-  })
-  console.log(newStr);
-</script>
-
-
+  <body>
+    <div class="container">
+      <div class="box"></div>
+    </div>
+  </body>
+  <script>
+    var number = 5;
+    var obj = {
+      number: 3,
+      fn1: (function () {
+        var number;
+        this.number *= 2;
+        number = number * 2;
+        number = 3;
+        // console.log(this.number);
+        return function () {
+          var num = this.number;
+          this.number *= 2;
+          console.log(num);
+          number *= 3;
+          console.log(number);
+        };
+      })(),
+    };
+    var fn1 = obj.fn1;
+    fn1.call(null);
+    obj.fn1();
+    console.log(window.number);
+  </script>
 </html>
