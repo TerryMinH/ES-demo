@@ -2,42 +2,52 @@
  * @Author: TerryMin
  * @Date: 2022-02-19 09:42:11
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-09-30 10:58:35
+ * @LastEditTime: 2022-12-08 09:43:06
  * @Description: file not
 -->
 
 <html>
   <head>
-    <style></style>
+    <style>
+      body {
+        margin: 0;
+        /* overflow: hidden; */
+      }
+      #wrapper {
+        height: 800px;
+        width: 200px;
+        border: 1px solid red;
+        overflow: auto;
+      }
+      #item {
+        height: 200px;
+        width: 200px;
+        border: 1px solid yellow;
+        position: absolute;
+        /* position: relative; */
+        top: 1000px;
+      }
+    </style>
   </head>
 
   <body>
-    <div class="container">
-      <div class="box"></div>
+    <div onclick="handleFn()">按钮</div>
+    <div id="wrapper">
+      <div id="item">ewrew发的发</div>
     </div>
   </body>
   <script>
-    var number = 5;
-    var obj = {
-      number: 3,
-      fn1: (function () {
-        var number;
-        this.number *= 2;
-        number = number * 2;
-        number = 3;
-        // console.log(this.number);
-        return function () {
-          var num = this.number;
-          this.number *= 2;
-          console.log(num);
-          number *= 3;
-          console.log(number);
-        };
-      })(),
+    let item = document.getElementById("item"); // 指定的元素
+    console.log(item, item.offsetTop);
+    console.log(88, item.getBoundingClientRect());
+    
+    const handleFn = () => {
+      let wrapper = document.getElementById("wrapper"); // 其父元素 - 必须是产生滚动条的元素
+      console.log(item.scrollTop);
+      // 父组件滚动法
+      // wrapper.scrollTo(item.offsetLeft, 0); // 横向
+      // document.body.scrollTo(0, item.offsetTop); // 竖向
+      // document.body.scrollIntoView(true); // 竖向
     };
-    var fn1 = obj.fn1;
-    fn1.call(null);
-    obj.fn1();
-    console.log(window.number);
   </script>
 </html>
