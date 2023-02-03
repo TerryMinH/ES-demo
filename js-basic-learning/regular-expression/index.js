@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-06-15 11:23:58
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-06-15 16:58:19
+ * @LastEditTime: 2023-01-30 09:52:20
  * @Description: file not
  */
 function is_weixn() {
@@ -21,10 +21,11 @@ const matchStr1 = "ahook,ttwe era au".match(/^a[\w]*$/g)
 
 const str = "aa12bb0cc789"
 const newStr = str.replace(/\d/g, function (matchStr, index, sourceStr) {
+	console.log(matchStr, index, sourceStr);
 	const result = parseInt(matchStr) + 1
 	return result
 })
-
+console.log(55,newStr);
 const string = "123 1234 12345 123456";
 // console.log(string.match(/[\d]{2,5}?/g));
 
@@ -45,11 +46,11 @@ const string4=(/(?=.*[0-9])^[0-9A-Za-z]{2,12}$/).test('eee');
 
 const regex = /^((\d)(\d(\d)))\1\2\3\4$/;
 const string5 = "1231231233";
-console.log( regex.test(string5) ); // true
-console.log( RegExp.$1 ); // 123
-console.log( RegExp.$2 ); // 1
-console.log( RegExp.$3 ); // 23
-console.log( RegExp.$4 ); // 3
+// console.log( regex.test(string5) ); // true
+// console.log( RegExp.$1 ); // 123
+// console.log( RegExp.$2 ); // 1
+// console.log( RegExp.$3 ); // 23
+// console.log( RegExp.$4 ); // 3
 
 
 

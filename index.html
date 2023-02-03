@@ -2,45 +2,46 @@
  * @Author: TerryMin
  * @Date: 2022-02-19 09:42:11
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-12-08 09:43:06
+ * @LastEditTime: 2023-02-03 14:00:06
  * @Description: file not
 -->
 
 <html>
   <head>
     <style>
-      body {
-        margin: 0;
-        /* overflow: hidden; */
+      #div1 {
+        width: 10px;
+        height: 80px;
+        background-color: #ff9137;
+        margin: 100px auto;
+        animation: spin 1s linear infinite;
+        animation-play-state: paused;
       }
-      #wrapper {
-        height: 800px;
-        width: 200px;
-        border: 1px solid red;
-        overflow: auto;
+      #div1:hover {
+        animation-play-state: running;
       }
-      #item {
-        height: 200px;
-        width: 200px;
-        border: 1px solid yellow;
-        position: absolute;
-        /* position: relative; */
-        top: 1000px;
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
       }
     </style>
   </head>
 
   <body>
-    <div onclick="handleFn()">按钮</div>
-    <div id="wrapper">
-      <div id="item">ewrew发的发</div>
-    </div>
+    <div id="div1"></div>
   </body>
   <script>
     let item = document.getElementById("item"); // 指定的元素
     console.log(item, item.offsetTop);
     console.log(88, item.getBoundingClientRect());
-    
+
     const handleFn = () => {
       let wrapper = document.getElementById("wrapper"); // 其父元素 - 必须是产生滚动条的元素
       console.log(item.scrollTop);
