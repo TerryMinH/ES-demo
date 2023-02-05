@@ -2,9 +2,10 @@
  * @Author: TerryMin
  * @Date: 2023-02-02 18:53:35
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-03 14:08:35
+ * @LastEditTime: 2023-02-05 15:06:42
  * @Description: file not
 -->
+
 # 动画
 
 一 [setTimeOut 与 requestAnimationFrame 区别](https://blog.csdn.net/weixin_40851188/article/details/89669416)
@@ -15,12 +16,13 @@
 
 3. 应用层面：利用 setTimeout，这种定时机制去做动画，模拟固定时间刷新页面。requestAnimationFrame 由浏览器专门为动画提供 的 API，在运行时浏览器会自动优化方法的调用，在特定性环境下可以有效节省了 CPU 开销。
 
-
-二 [animation各个属性详解](https://blog.csdn.net/aSuncat/article/details/52588078)
+二 [animation 各个属性详解](https://blog.csdn.net/aSuncat/article/details/52588078)
 
 ```css
-animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+animation: name duration timing-function delay iteration-count direction
+  fill-mode play-state;
 ```
 
+三 [web 中的度数](https://zhuanlan.zhihu.com/p/42323283)
 
-
+现实中，角度值是随着逆时针方向增加。在 Web 上，角度值却是随着顺时针方向增加。

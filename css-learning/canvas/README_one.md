@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-01-10 11:35:35
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-03 14:19:10
+ * @LastEditTime: 2023-02-03 14:52:03
  * @Description: file not
 -->
 
@@ -19,9 +19,9 @@
 - 适用场景：如果图片足够小且因为用处的特殊性无法被制作成雪碧图（CssSprites），在整个网站的复用性很高且基本不会被更新。
 
 
-## [Canvas](https://juejin.cn/post/6844903989444608014)
+二 [Canvas](https://juejin.cn/post/6844903989444608014)
 
-一 Canvas 和 SVG 是当前 HTML5 中主要使用的图形绘制技术，前者提供画布标签和绘制 API，后者是一整套独立的矢量图形语言,使用 XML 格式定义图像。
+- Canvas 和 SVG 是当前 HTML5 中主要使用的图形绘制技术，前者提供画布标签和绘制 API，后者是一整套独立的矢量图形语言,使用 XML 格式定义图像。
 
 1. Canvas 通过 JS 绘制图形，只有当个 HTML 元素；而 SVG 使用 XML 格式定义图形，生成的图形包含多种图形元素(Path、Line、Rect)。
 2. Canvas 绘制基于像素级控制；SVG 则基于内部图形元素操作控制；
@@ -31,4 +31,7 @@
 6. Canvas 适用场景：适合像素处理，动态渲染和大数据量绘制; 适合图像密集型的游戏;SVG 适用场景：适合静态图片展示，高保真文档查看和打印的应用场景。
 
 
-二 [Canvas使用](https://juejin.cn/post/7119495608938790942)
+三 [Canvas使用](https://juejin.cn/post/7119495608938790942)
+
+
+
