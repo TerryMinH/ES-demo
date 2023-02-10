@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-06-07 10:51:52
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-06-07 11:00:39
+ * @LastEditTime: 2023-02-10 09:32:53
  * @Description: file not
 -->
 # 源码阅读
@@ -14,4 +14,10 @@
 - xo: 对代码进行检查
 - ava: 执行根目录的test.js文件中的测试用例
 - tsd: 通过index.test-d.ts文件测试index.d.ts定义    
+
+
+
+
+
+
 
