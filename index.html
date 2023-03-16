@@ -2,53 +2,73 @@
  * @Author: TerryMin
  * @Date: 2022-02-19 09:42:11
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-03 14:00:06
+ * @LastEditTime: 2023-03-16 14:16:18
  * @Description: file not
 -->
 
 <html>
   <head>
     <style>
-      #div1 {
-        width: 10px;
-        height: 80px;
-        background-color: #ff9137;
-        margin: 100px auto;
-        animation: spin 1s linear infinite;
-        animation-play-state: paused;
+      #button {
+        position: relative;
+        display: block;
+        margin: 200px auto;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        transform: translateY(-50%);
+        /* 伪类会扩张，最后溢出按钮框，
+    所以需要设置overflow：hidden隐藏 */
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        user-select: none;
+        /* background: url("http://consumer-img.huawei.com/content/dam/huawei-cbg-site/greate-china/cn/mkt/homepage/section4/home-s4-watch2-pro-banner.jpg")
+          fixed center center; */
       }
-      #div1:hover {
-        animation-play-state: running;
+      #button:hover {
+        background: rgba(0, 0, 0, 0.4);
       }
-      @keyframes spin {
+
+      /* 实现水波纹效果的小球样式 */
+      #button > .ripple-ball {
+        position: absolute;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.4);
+        animation: ripple 1s;
+      }
+      /* 小球动画 */
+      @keyframes ripple {
         0% {
-          transform: rotate(0deg);
+          transform: scale(2);
         }
-        50% {
-          transform: rotate(180deg);
+        /* 波纹扩张 */
+        85% {
+          transform: scale(25);
         }
         100% {
-          transform: rotate(360deg);
+          opacity: 0;
         }
       }
     </style>
   </head>
 
   <body>
-    <div id="div1"></div>
+    <div id="button">
+      <p>button</p>
+    </div>
   </body>
   <script>
-    let item = document.getElementById("item"); // 指定的元素
-    console.log(item, item.offsetTop);
-    console.log(88, item.getBoundingClientRect());
-
-    const handleFn = () => {
-      let wrapper = document.getElementById("wrapper"); // 其父元素 - 必须是产生滚动条的元素
-      console.log(item.scrollTop);
-      // 父组件滚动法
-      // wrapper.scrollTo(item.offsetLeft, 0); // 横向
-      // document.body.scrollTo(0, item.offsetTop); // 竖向
-      // document.body.scrollIntoView(true); // 竖向
-    };
+    var regex = /(\d{4})-(\d{2})-(\d{2})/;
+    var string = "2017-06-12";
+    var result = string.replace(regex, function () {
+      console.log(RegExp);
+      return RegExp.$2 + "/" + RegExp.$3 + "/" + RegExp.$1;
+    });
+    console.log(result);
+    // => "06/12/2017"
   </script>
 </html>
