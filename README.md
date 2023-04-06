@@ -2,15 +2,18 @@
  * @Author: TerryMin
  * @Date: 2020-12-14 17:25:10
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-10 11:01:52
+ * @LastEditTime: 2023-04-06 14:51:44
  * @Description: file not
 -->
+
 # JavaScript 基础生态学习
 
-## JS运算符
+## JS 运算符
 
 一 移位运算符
+
 1. 移位运算符可以在二进制的基础上对数字进行平移,在图形图像编程中应用广泛。按照平移的方向和填充数字的规则分为三种：
+
 ```js
 <<     //左移
 >>     //带符号右移
@@ -22,9 +25,10 @@
 例如11 >> 2，则是将数字11右移2位.得 2
 ```
 
-[JS移位运算](https://juejin.cn/post/7007682578572378143)
+[JS 移位运算](https://juejin.cn/post/7007682578572378143)
 
 二 位逻辑运算符:
+
 ```js
 位与（&）、位或（|）、位异或（^）、非位（~）
 
@@ -36,6 +40,10 @@
 
 [位逻辑运算符](https://blog.csdn.net/weixin_45817492/article/details/110270114)
 
+三 js 跳出循环
+[if 语句中 return、break、continue 区别](https://cloud.tencent.com/developer/article/1939510)
 
-
+1. return 结束循环，后面的语句不执行
+2. break 结束循环，后面的语句执行
+3. continue 结束本次判断的循环，跳入下一个循环
 
