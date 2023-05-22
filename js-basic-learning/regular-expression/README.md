@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-06-15 11:21:48
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-16 14:25:10
+ * @LastEditTime: 2023-04-13 20:24:26
  * @Description: file not
 -->
 
@@ -121,3 +121,5 @@ console.log(result3); //#h#e#llo#
 ### 正则使用示例
 
 1. [JS 正则匹配字符串中某段内容](https://blog.csdn.net/callmeCassie/article/details/106748451)
+
+2. [JS正则校验工具](https://c.runoob.com/front-end/854/)

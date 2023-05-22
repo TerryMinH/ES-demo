@@ -2,18 +2,19 @@
  * @Author: TerryMin
  * @Date: 2022-09-21 14:05:04
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-09-21 14:27:34
+ * @LastEditTime: 2023-04-12 19:01:12
  * @Description: file not
  */
 const handleReplace = (str) => {
   return str.replace(/(^\s+)|(\s+$)/g, function (rs, $1, $2, offset, source) {
+    console.log(rs, $1, $2,);
     //arguments中的每个元素对应一个参数
     // console.log(arguments);
     return 3;
   });
 };
-
-console.log(handleReplace(" abcd "));
+handleReplace(" abcd ")
+// console.log();
 
 String.prototype.trim = function () {
   /**
@@ -30,4 +31,4 @@ String.prototype.trim = function () {
   });
 };
 
-console.log(" abcd ".trim());
+// console.log(" abcd ".trim());
