@@ -2,27 +2,40 @@
  * @Author: TerryMin
  * @Date: 2023-02-02 18:53:35
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-17 15:15:43
+ * @LastEditTime: 2023-12-17 09:08:00
  * @Description: file not
 -->
 
 # 动画
 
-一 [setTimeOut 与 requestAnimationFrame 区别](https://blog.csdn.net/weixin_40851188/article/details/89669416)
+## [transform 变换](https://juejin.cn/post/6959407827047677965)
 
-1. 引擎层面：setTimeout 属于 JS 引擎，存在事件轮询，存在事件队列。requestAnimationFrame 属于 GUI 引擎，发生在渲 染过程的中重绘重排部分，与电脑分辨率保持一致。
+transform 主要包括以下几种:
 
-2. 性能层面：当页面被隐藏或最小化时，定时器 setTimeout 仍在后台执行动画任 务。当页面处于未激活的状态下，该页面的屏幕刷新任 务会被系统暂停，requestAnimationFrame 也会停止。
+1. 旋转 rotate
+2. 扭曲 skew
+3. 缩放 scale
+4. 移动 translate
+5. 矩阵变形 matrix。
 
-3. 应用层面：利用 setTimeout，这种定时机制去做动画，模拟固定时间刷新页面。requestAnimationFrame 由浏览器专门为动画提供 的 API，在运行时浏览器会自动优化方法的调用，在特定性环境下可以有效节省了 CPU 开销。
+## [transition 过渡动画](https://juejin.cn/post/6970885478967050254)
 
-二 [animation 各个属性详解](https://blog.csdn.net/aSuncat/article/details/52588078)
+transition 族属性:
 
-```css
-animation: name duration timing-function delay iteration-count direction
-  fill-mode play-state;
-```
+1. transition-property 指定使用过渡效果的 css 属性
+2. transition-duration 设置过渡动画持续时间
+3. transition-timing-function 设置动画的时间函数。
+4. transition-delay 设置动画的延迟时间
 
-三 [web 中的度数](https://zhuanlan.zhihu.com/p/42323283)
+## [animation 自定义动画 各个属性详解](https://blog.csdn.net/aSuncat/article/details/52588078)
 
-现实中，角度值是随着逆时针方向增加。在 Web 上，角度值却是随着顺时针方向增加。
+animation 属性:
+
+1. animation-name：指定要绑定到选择器的关键帧的名称。
+2. animation-duration：定义动画完成一个周期需要多少秒或毫秒
+3. animation-timing-function：指定动画将如何完成一个周期。
+4. animation-delay：属性定义动画什么时候开始。
+5. animation-iteration-count ：定义动画应该播放多少次。
+6. animation-direction：定义是否循环交替反向播放动画。
+7. animation-fill-mode：规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式。
+8. animation-play-state：指定动画是否正在运行或已暂停。
