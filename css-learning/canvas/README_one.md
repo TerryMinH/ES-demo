@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-01-10 11:35:35
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-03 14:52:03
+ * @LastEditTime: 2023-12-19 15:33:37
  * @Description: file not
 -->
 
@@ -19,7 +19,7 @@
 - 适用场景：如果图片足够小且因为用处的特殊性无法被制作成雪碧图（CssSprites），在整个网站的复用性很高且基本不会被更新。
 
 
-二 [Canvas](https://juejin.cn/post/6844903989444608014)
+二 [Canvas](https://juejin.cn/post/7116784455561248775#heading-56)
 
 - Canvas 和 SVG 是当前 HTML5 中主要使用的图形绘制技术，前者提供画布标签和绘制 API，后者是一整套独立的矢量图形语言,使用 XML 格式定义图像。
 
